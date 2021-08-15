@@ -3,19 +3,19 @@ import PropTypes from "prop-types";
 
 function StatisticsItem({ label, percentage }) {
   return (
-    <li class="item">
-      <span class="label">{label}</span>
-      <span class="percentage">{percentage}%</span>
+    <li className="item">
+      <span className="label">{label}</span>
+      <span className="percentage">{percentage}%</span>
     </li>
   );
 }
 
 function Statistics({ title, stats }) {
   return (
-    <section class="statistics">
-      <h2 class="title">{title}</h2>
+    <section className="statistics">
+      {title !== undefined && <h2 className="title">{title}</h2>}
 
-      <ul class="stat-list">
+      <ul className="stat-list">
         {stats.map((stat) => (
           <StatisticsItem
             key={stat.id}
@@ -32,9 +32,9 @@ Statistics.propTypes = {
   title: PropTypes.string,
 };
 
-Statistics.defaultProps = {
+/*Statistics.defaultProps = {
   title: "Default title",
-};
+};*/
 
 StatisticsItem.propTypes = {
   label: PropTypes.string.isRequired,
