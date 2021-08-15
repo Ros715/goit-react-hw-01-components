@@ -4,6 +4,10 @@ import Profile from "./social-profile/Profile.js";
 import user from "./social-profile/user.json";
 import FriendList from "./friends/FriendList.js";
 import friends from "./friends/friends.json";
+import Statistics from "./statistics/Statistics.js";
+import statisticalData from "./statistics/statistical-data.json";
+import TransactionHistory from "./transactions/TransactionHistory.js";
+import transactions from "./transactions/transactions.json";
 
 function App() {
   return (
@@ -16,6 +20,9 @@ function App() {
         stats={user.stats}
       />
       <FriendList friends={friends} />
+      <Statistics title="Upload stats" stats={statisticalData} />
+      <Statistics stats={statisticalData} />
+      <TransactionHistory items={transactions} />
     </div>
   );
 }
